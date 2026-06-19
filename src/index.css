@@ -2,11 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* =====================================================
-   ASTER CAFE & KITCHEN - PREMIUM PURPLE GOLD THEME
-===================================================== */
 
-/* ===== Base Styles ===== */
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +23,7 @@ body {
   color: #ffffff;
 }
 
-/* ===== Custom Scrollbar ===== */
+
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -45,10 +41,10 @@ body {
   background: #F0C56B;
 }
 
-/* ===== Components ===== */
+
 @layer components {
 
-  /* Glass Cards */
+
   .glass {
     @apply bg-white/10 backdrop-blur-xl border border-white/10;
   }
@@ -61,7 +57,7 @@ body {
     @apply bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl;
   }
 
-  /* Gold Glow Effects */
+  
   .gold-glow {
     box-shadow:
       0 0 20px rgba(212,162,76,0.18),
@@ -74,7 +70,7 @@ body {
       0 0 70px rgba(212,162,76,0.12);
   }
 
-  /* Text Gradient */
+  
   .text-gold-gradient {
     background: linear-gradient(135deg, #D4A24C 0%, #FFD98A 50%, #D4A24C 100%);
     -webkit-background-clip: text;
@@ -82,7 +78,7 @@ body {
     background-clip: text;
   }
 
-  /* Buttons */
+
   .btn-primary {
     @apply text-white font-semibold rounded-xl px-6 py-3 transition-all duration-300;
     background: linear-gradient(135deg, #D4A24C, #B8862E);
@@ -116,7 +112,7 @@ body {
     background: rgba(255,255,255,0.06);
   }
 
-  /* Inputs */
+  
   .input-field {
     @apply w-full rounded-xl px-4 py-3 text-white transition-all duration-300;
     background: rgba(255,255,255,0.06);
@@ -133,7 +129,7 @@ body {
     background: rgba(255,255,255,0.08);
   }
 
-  /* Card Hover */
+
   .card-hover {
     @apply transition-all duration-300;
   }
@@ -145,7 +141,7 @@ body {
     border-color: rgba(212,162,76,0.18);
   }
 
-  /* Animation Delays */
+  
   .stagger-1 { animation-delay: 0.05s; }
   .stagger-2 { animation-delay: 0.10s; }
   .stagger-3 { animation-delay: 0.15s; }
@@ -156,7 +152,7 @@ body {
   .stagger-8 { animation-delay: 0.40s; }
 }
 
-/* ===== Animations ===== */
+
 
 @keyframes steamRise {
   0% {
@@ -220,7 +216,7 @@ body {
   }
 }
 
-/* Steam Particle */
+
 .steam-particle {
   position: absolute;
   width: 3px;
@@ -230,7 +226,7 @@ body {
   animation: steamRise 8s ease-in infinite;
 }
 
-/* Splash Logo Shine */
+
 .logo-shine {
   position: absolute;
   inset: 0;
@@ -245,12 +241,12 @@ body {
   animation: logoShine 2.4s linear infinite;
 }
 
-/* Page Enter */
+
 .page-enter {
   animation: fadeInUp 0.55s ease-out forwards;
 }
 
-/* ===== Status Colors ===== */
+
 .status-empty      { @apply bg-white/10 text-white/50; }
 .status-browsing   { @apply bg-blue-500/20 text-blue-300 border-blue-400/30; }
 .status-waiting    { @apply bg-red-500/20 text-red-300 border-red-400/30; }
@@ -260,7 +256,7 @@ body {
 .status-served     { @apply bg-purple-500/20 text-purple-300 border-purple-400/30; }
 .status-paid       { @apply bg-green-500/20 text-green-300 border-green-400/30; }
 
-/* ===== Number Badge ===== */
+
 .badge-count {
   @apply absolute -top-1.5 -right-1.5 text-[10px] font-bold
          min-w-[18px] h-[18px] rounded-full flex items-center justify-center;
@@ -268,7 +264,7 @@ body {
   color: #2E003E;
 }
 
-/* ===== Safe Area ===== */
+
 .pb-safe {
   padding-bottom: max(env(safe-area-inset-bottom), 0px);
 }
