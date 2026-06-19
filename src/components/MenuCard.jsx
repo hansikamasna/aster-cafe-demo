@@ -21,12 +21,15 @@ export default function MenuCard({ item }) {
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-4xl bg-brand-surface">
-            {item.category === 'coffee' :
-             item.category === 'tea':
-             item.category === 'cold' :
-             item.category === 'starters' :
-             item.category === 'mains' ? :
-             item.category === 'pasta' ? }
+            {
+              item.category === 'coffee' ? '☕' :
+              item.category === 'tea' ? '🫖' :
+              item.category === 'cold' ? '🥤' :
+              item.category === 'starters' ? '🍟' :
+              item.category === 'mains' ? '🍛' :
+              item.category === 'pasta' ? '🍝' :
+              '🍽️'
+            }
           </div>
         )}
 
