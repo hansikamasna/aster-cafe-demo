@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react';
 import { Routes, Route, useSearchParams, useLocation } from 'react-router-dom';
 import { useCafe } from './store/CafeStore';
 
-// Customer pages
+
 import CustomerHome from './pages/customer/Home';
 import CustomerMenu from './pages/customer/Menu';
 import CustomerCart from './pages/customer/Cart';
 import CustomerBill from './pages/customer/Bill';
 import CustomerSuccess from './pages/customer/Success';
 
-// Admin pages
+
 import AdminLogin from './pages/admin/Login';
 import AdminDashboard from './pages/admin/Dashboard';
 import AdminOrders from './pages/admin/Orders';
@@ -17,7 +17,7 @@ import AdminTables from './pages/admin/Tables';
 import AdminBilling from './pages/admin/Billing';
 
 
-// Components
+
 import Loader from './components/Loader';
 import BottomNav from './components/BottomNav';
 
@@ -28,7 +28,7 @@ export default function App() {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith('/admin');
 
-  // Detect table number from URL
+ 
   useEffect(() => {
     const tableParam = searchParams.get('table');
     if (tableParam) {
@@ -39,7 +39,7 @@ export default function App() {
     }
   }, [searchParams, setTableNumber]);
 
-  // Loader on first load
+  
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2200);
     return () => clearTimeout(timer);
@@ -52,14 +52,14 @@ export default function App() {
   return (
     <div className="min-h-screen bg-brand-black">
       <Routes>
-        {/* Customer Routes */}
+        
         <Route path="/" element={<CustomerHome />} />
         <Route path="/menu" element={<CustomerMenu />} />
         <Route path="/cart" element={<CustomerCart />} />
         <Route path="/bill" element={<CustomerBill />} />
         <Route path="/success" element={<CustomerSuccess />} />
 
-        {/* Admin Routes */}
+        
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/admin/orders" element={<AdminOrders />} />
@@ -68,7 +68,7 @@ export default function App() {
         
       </Routes>
 
-      {/* Bottom Navigation for customer */}
+     
       {!isAdminRoute && tableNumber && <BottomNav />}
     </div>
   );
