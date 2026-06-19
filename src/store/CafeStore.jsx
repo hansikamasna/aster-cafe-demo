@@ -142,7 +142,7 @@ export function CafeProvider({ children }) {
     });
   }, [broadcast]);
 
-  // CART
+  
   const addToCart = useCallback((item) => {
     setCart(prev => {
       const existing = prev.find(i => i.id === item.id);
@@ -179,7 +179,7 @@ export function CafeProvider({ children }) {
 
   const clearCart = useCallback(() => setCart([]), []);
 
-  // FIREBASE PLACE ORDER
+
   const placeOrder = useCallback(async (items, table) => {
     const order = {
       id: `ORD-${Date.now().toString(36).toUpperCase()}`,
@@ -231,7 +231,7 @@ export function CafeProvider({ children }) {
     }));
   }, []);
 
-  // TABLES
+  
   const markTablePaid = useCallback((tableId) => {
     updateShared(prev => ({
       ...prev,
@@ -260,7 +260,7 @@ export function CafeProvider({ children }) {
     }));
   }, [updateShared]);
 
-  // STAFF
+
   const callStaff = useCallback((table) => {
     const call = {
       id: `CALL-${Date.now().toString(36).toUpperCase()}`,
@@ -284,7 +284,7 @@ export function CafeProvider({ children }) {
     }));
   }, [updateShared]);
 
-  // DERIVED
+  
   const getTableOrders = useCallback((tableId) => {
     return state.orders.filter(
       o =>
